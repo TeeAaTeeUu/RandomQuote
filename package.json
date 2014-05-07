@@ -1,8 +1,9 @@
 {
-  "name": "AngularJS-WoW",
+  "name": "RandomQuote",
   "main": "server.js",
   "dependencies": {
     "express": "latest",
+    "request": "latest",
     "bower": "latest"
   },
   "scripts": {

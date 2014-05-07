@@ -1,21 +1,16 @@
 angular.module('MainCtrl', []).controller('MainController', function($http, $scope) {
 
-	$scope.tagline = 'Here be stuff';
+	$scope.tagline = 'Intelligence for life';
+	$scope.show = false;
 
-	$scope.search = function(itemID) {
-		if (itemID) {
-			$http.jsonp('http://eu.battle.net/api/wow/item/' + itemID + '?jsonp=JSON_CALLBACK').success( function(data, status, headers, config) {
-        		$scope.result = data;
-    		})
-		} else {
-			$scope.result = {"name": "You didn't give me anything. Why?"};
-		};
-		
-	};
+	$scope.newQuote = function() {
+		$http.get('/api/v1/quote/random').success( function(data, status, headers, config) {
+         	$scope.result = data;
+     	})
+	}		
 
-	$scope.clearSearch = function() {
+	$scope.clearQuote = function() {
 		$scope.result = null;
-		$scope.itemID = null;
+		$scope.show = false;
 	}
-
 });
