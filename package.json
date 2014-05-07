@@ -1,0 +1,11 @@
+{
+  "name": "AngularJS-WoW",
+  "main": "server.js",
+  "dependencies": {
+    "express": "latest",
+    "bower": "latest"
+  },
+  "scripts": {
+    "postinstall": "./node_modules/bower/bin/bower install"
+  }
+}
