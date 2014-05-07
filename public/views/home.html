@@ -5,9 +5,9 @@
 
   <button class="btn btn-primary" ng-click="newQuote()">New Quote</button>
 
-  <div>
+  <div ng-show="result">
 
-   <p>{{ result }}<p>
+   <p>{{ result.quote }} <a href="{{ result.link }}" style="font-size: 70%">source</a><p>
 
    <button class="btn btn-danger" ng-click="clearQuote()">Clear</button>
 

@@ -1,5 +1,7 @@
-angular.module('MainService', []).factory('Main', ['$http', function($http) {
-
-	
-
-}]);
+angular.module('MainService', []).factory('Main', function($http) {
+	return {
+		get : function() {
+			return $http.get('/api/v1/quote/random');
+		}
+	}
+});
