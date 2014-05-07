@@ -1,13 +1,13 @@
 <div class="jumbotron text-center">
-	<h1>RandomQuote</h1>
+<h1>RandomQuote</h1>
 
-	<p>{{ tagline }}</p>
+<p>{{ tagline }}</p>
 
   <button class="btn btn-primary" ng-click="newQuote()">New Quote</button>
 
-  <div>
+  <div ng-show="result">
 
-   <p>{{ result }}<p>
+   <p>{{ result.quote }} <a href="{{ result.link }}" style="font-size: 70%">source</a><p>
 
    <button class="btn btn-danger" ng-click="clearQuote()">Clear</button>
 
