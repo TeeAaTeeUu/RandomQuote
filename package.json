@@ -6,8 +6,6 @@
     "request": "latest",
     "bower": "latest",
     "mongoose" : "latest",
-    "body-parser": "latest",
-    "method-override": "latest",
     "mongoose-random": "latest"
     },
   "scripts": {
