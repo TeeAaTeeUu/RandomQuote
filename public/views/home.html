@@ -1,23 +1,24 @@
 <div class="jumbotron text-center">
-<h1>RandomQuote</h1>
+  <h1>RandomQuote</h1>
 
-<p>{{ tagline }}</p>
+  <p>{{ tagline }}</p>
 
   <button class="btn btn-primary" data-ng-click="newQuote()">New Quote</button>
 
   <div data-ng-show="result">
 
-<div class="row">
-  <div class="col-md-2"></div>
-  <div class="col-md-8">
-  	<p>{{ result.quote }}
-  	<a href="{{ result.link }}" style="font-size: 70%">source</a></p>
-  </div>
-  <div class="col-md-2"></div>
-</div>
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+       <p>{{ result.quote }}
+         <a href="{{ result.link }}" style="font-size: 70%">source</a>
+       </p>
+     </div>
+     <div class="col-md-2"></div>
+   </div>
 
    <button class="btn btn-danger" data-ng-click="clearQuote()">Clear</button>
 
-  </div>
+ </div>
 
 </div>

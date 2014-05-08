@@ -9,7 +9,7 @@
     "body-parser": "latest",
     "method-override": "latest",
     "mongoose-random": "latest"
-  },
+    },
   "scripts": {
     "postinstall": "./node_modules/bower/bin/bower install"
   }
