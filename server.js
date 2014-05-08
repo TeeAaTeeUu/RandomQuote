@@ -5,9 +5,10 @@ var mongoose = require('mongoose'); // mongoose for mongodb
 var request = require('request');
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
+var database = require('./config/database'); // load the database config
 
 // configuration ===========================================
-mongoose.connect('mongodb://localhost/test'); // connect to mongoDB database
+mongoose.connect(database.url); // connect to mongoDB database
 
 var port = process.env.PORT || 8080; // set our port
 app.use(express.static(__dirname + '/public')); // set the static files location /public/img will be /img for users
