@@ -21,3 +21,16 @@ cd RandomQuote
 npm install
 npm start
 ```
+
+API
+===========
+
+Get new quote via [iheartquotes.com](http://www.iheartquotes.com/api/v1/random?format=json)
+```
+/api/v1/quote/random
+```
+
+Get old already cached quote
+```
+/api/v1/quote/random/cached
+```
