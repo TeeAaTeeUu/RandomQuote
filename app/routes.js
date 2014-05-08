@@ -8,7 +8,7 @@ module.exports = function(app) {
 		var request = require('request');
 		request('http://www.iheartquotes.com/api/v1/random?format=json', function (error, response, body) {
 			if (!error && response.statusCode == 200) {
-    			res.json(body);
+    			res.send(body);
 			}
 		})
 	});
