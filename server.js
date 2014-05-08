@@ -2,15 +2,20 @@
 var express = require('express');
 var app     = express();
 var mongoose = require('mongoose'); // mongoose for mongodb
+var request = require('request');
+var bodyParser = require('body-parser');
+var methodOverride = require('method-override');
 
 // configuration ===========================================
 mongoose.connect('mongodb://localhost/test'); // connect to mongoDB database
 
 var port = process.env.PORT || 8080; // set our port
 app.use(express.static(__dirname + '/public')); // set the static files location /public/img will be /img for users
+app.use(bodyParser()); // pull information from html in POST
+app.use(methodOverride()); // simulate DELETE and PUT
 
 // routes ==================================================
-require('./app/routes')(app); // pass our application into our routes
+require('./app/routes')(app, request); // pass our application into our routes
 
 // start app ===============================================
 app.listen(port);	
